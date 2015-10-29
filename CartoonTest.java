@@ -47,6 +47,22 @@ class CartoonTest {
 
    // The main method is the point of entry into the program...
    public static void main(String[] args) {
+		CartoonCharacter fred = new CartoonCharacter("Fred Flintstone", "blue", 42);
+		CartoonCharacter wilma = new CartoonCharacter("Wilma Flintstone", "red", 63);
+		CartoonCharacter barney = new CartoonCharacter("Barney Rubble", "yellow", 2);
+		
+		fred.displayMe();
+		wilma.displayMe();
+		barney.displayMe();
+		
+		System.out.println(barney.name);
+		System.out.println(CartoonCharacter.count);
+		/* Answer on question 7: count behoort niet tot elk object wat wordt aangemaakt,
+		maar behoort tot de klasse zelf. Zonder static is count niet bereikbaar via
+		CartoonCharacter.count. Als bij elk object een nieuwe count werd aangemaakt, zou
+		alleen het object zelf zijn eigen count verhogen.*/
+		
+		System.out.println(Math.PI);
    }
 }
 

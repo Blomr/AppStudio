@@ -1,7 +1,7 @@
 class CartoonCharacter {
 
    // Properties of the class...
-   private String name;
+   public String name;
    private String favouriteColour;
    private int    favouriteNumber;
 
@@ -10,6 +10,7 @@ class CartoonCharacter {
       name            = aName;
       favouriteColour = aColour;
       favouriteNumber = aNumber;
+	  count++;
    }
 
    // Methods of the class...
@@ -18,4 +19,6 @@ class CartoonCharacter {
       System.out.println("my favourite colour is " + favouriteColour);
       System.out.println("and my favourite number is " + favouriteNumber);
    }
+   
+   public static int count = 0;
 }
