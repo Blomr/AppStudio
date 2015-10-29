@@ -1,7 +1,7 @@
 class Flea {
    
    // Properties of the class...
-   private String name;
+   public String name;
    
    // Constructor of the class...
    public Flea(String aName) {
@@ -18,9 +18,9 @@ class Flea {
 class Dog {
 
    // Properties of the class...
-   private String name;
+   public String name;
    private int    age;
-   private Flea   dogsFlea;
+   public Flea   dogsFlea;
 
    // Constructor of the class...
    public Dog(String aName, int anAge, Flea aFlea) {
@@ -31,7 +31,7 @@ class Dog {
    
 	public String toString() {
 		return "I am a dog called " + name + ", I am " + age 
-		+ " years old and " + dogsFlea;
+		+ " years old and I have a flea called " + dogsFlea.name;
 	}
 
 }
@@ -40,12 +40,17 @@ class DogOwner {
 	
 	private String name;
 	private int salary;
-	private Dog ownersDog;
+	public Dog ownersDog;
 	
 	public DogOwner(String aName, int aSalary, Dog aOwnersDog) {
 		name = aName;
 		salary = aSalary;
 		ownersDog = aOwnersDog;
+	}
+	
+	public String toString() {
+		return "I am a dog owner called " + name + ", I have a salary of " + salary 
+		+ " and I have a dog called " + ownersDog.name;
 	}
 }
 
@@ -66,7 +71,16 @@ class DogTest {
 		System.out.println(jimbo.toString());
 		System.out.println(fido.toString());
 		
-		DogOwner angus = new DogOwner("Angus", 2000, )
+		DogOwner angus = new DogOwner("Angus", 2000, rex);
+		DogOwner brian = new DogOwner("Brian", 2200, jimbo);
+		DogOwner charles = new DogOwner("Charles", 1900, fido);
+		
+		System.out.println(angus.toString());
+		System.out.println(brian.toString());
+		System.out.println(charles.toString());
+		
+		// Answer on question 8: I am a flea called Pop
+		System.out.println(angus.ownersDog.dogsFlea.toString());
    }
 }
 
