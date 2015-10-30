@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:text="Rock Paper Scissors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:id="@+id/title" />
+
+    <TextView
+        android:text="You:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="27dp"
+        android:id="@+id/you"
+        android:layout_below="@+id/title"
+        android:layout_alignLeft="@+id/title"
+        android:layout_alignStart="@+id/title" />
+
+    <TextView
+        android:text="Rival:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/rival"
+        android:layout_alignTop="@+id/scoreYou"
+        android:layout_toLeftOf="@+id/scoreRival"
+        android:layout_toStartOf="@+id/scoreRival" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scoreYou"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/you"
+        android:layout_toRightOf="@+id/you"
+        android:layout_toEndOf="@+id/you" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scoreRival"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/rival"
+        android:layout_alignRight="@+id/title"
+        android:layout_alignEnd="@+id/title" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rock"
+        android:textSize="15sp"
+        android:padding="20dp"
+        android:id="@+id/rockButton"
+        android:layout_above="@+id/paperButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/paperButton"
+        android:layout_alignStart="@+id/paperButton"
+        android:onClick="clickRock"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paper"
+        android:textSize="15sp"
+        android:padding="20dp"
+        android:id="@+id/paperButton"
+        android:layout_above="@+id/scissorsButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/scissorsButton"
+        android:layout_alignStart="@+id/scissorsButton"
+        android:onClick="clickPaper"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scissors"
+        android:textSize="15sp"
+        android:padding="20dp"
+        android:id="@+id/scissorsButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="clickScissors"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose a button"
+        android:textSize="20sp"
+        android:id="@+id/youWonYouLose"
+        android:layout_below="@+id/rockButton"
+        android:layout_alignLeft="@+id/you"
+        android:layout_alignStart="@+id/you" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:textSize="20sp"
+        android:id="@+id/result"
+        android:layout_above="@+id/rockButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="89dp" />
+</RelativeLayout>
